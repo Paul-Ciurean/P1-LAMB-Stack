@@ -2,7 +2,7 @@
 
 ### Now that you have a web server up and running, you need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database. MySQL is a popular relational database management system used within PHP environments, so we will use it in our project.
 
-### Again, use ‘apt’ to acquire and install this software:
+### 2.1: Again, use ‘apt’ to acquire and install this software:
 
 `$ sudo apt install mysql-server`
 
@@ -10,13 +10,13 @@
 
 ### When prompted, confirm installation by typing Y, and then ENTER.
 
-### When the installation is finished, log in to the MySQL console by typing:
+### 2.2: When the installation is finished, log in to the MySQL console by typing:
 
 `$ sudo mysql`
 
 ![log in mysql-server](./images/log-in-mysql.png)
 
-### It’s recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.1.
+### 2.3: It’s recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.1.
 
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';` 
 
@@ -24,7 +24,7 @@
 
 `mysql> exit`
 
-### Start the interactive script by running:
+### 2.4: Start the interactive script by running:
 
 `$ sudo mysql_secure_installation`
 
@@ -33,11 +33,11 @@
 
 ### Note: Enabling this feature is something of a judgment call. If enabled, passwords which don’t match the specified criteria will be rejected by MySQL with an error. It is safe to leave validation disabled, but you should always use strong, unique passwords for database credentials.
 
-### Answer Y for yes, or anything else to continue without enabling.
+### 2.5: Answer Y for yes, or anything else to continue without enabling.
 
 ![mysql-pass](./images/mysql-password.png)
 
-### If you answer “yes”, you’ll be asked to select a level of password validation. Keep in mind that if you enter 2 for the strongest level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters, or which is based on common dictionary words e.g PassWord.1.
+### 2.6: If you answer “yes”, you’ll be asked to select a level of password validation. Keep in mind that if you enter 2 for the strongest level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters, or which is based on common dictionary words e.g PassWord.1.
 
 ![mysql-pass-level](./images/pass-level.png)
 
@@ -49,13 +49,15 @@
 
 ### For the rest of the questions, press Y and hit the ENTER key at each prompt. This will prompt you to change the root password, remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes you have made.
 
-### When you’re finished, test if you’re able to log in to the MySQL console by typing:
+### 2.7: When you’re finished, test if you’re able to log in to the MySQL console by typing:
 
 `$ sudo mysql -p`
 
+![mysql-new-pass](./images/login-pass.png)
+
 ### Notice the -p flag in this command, which will prompt you for the password used after changing the root user password.
 
-### To exit the MYSQL console, type:
+### 2.8: To exit the MYSQL console, type:
 
 `mysql> exit`
 
