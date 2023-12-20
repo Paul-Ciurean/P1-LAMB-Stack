@@ -16,10 +16,6 @@
 
 ### Inside the opened file, press "I" on the keyboard and paste the following: 
 
-![important](./images/important-config.png)
-
-### !!!!!!!!  Make sure the text looks like this in the terminal
-
 - `<VirtualHost *:80>`
     - `ServerName projectlamp`
     - `ServerAlias www.projectlamp`
@@ -28,6 +24,11 @@
     - `ErrorLog ${APACHE_LOG_DIR}/error.log`
     - `CustomLog ${APACHE_LOG_DIR}/access.log combined`
 - `</VirtualHost>`
+
+
+### !!!!!!!!  Make sure the text looks like this in the terminal
+
+![important](./images/important-config.png)
 
 ### 4.4: Save the file by following the next steps:
 
