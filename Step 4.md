@@ -64,6 +64,11 @@
 
 ### 4.9: Create a Text HTML file: 
 
-`sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html`
+`sudo sh -c "echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html" `
+
+### Now go to your browser and refresh the page:
+
+![new-index-file](./images/new-index-file.png)
+
 
 ## You can now go to the next Step.

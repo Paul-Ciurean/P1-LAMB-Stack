@@ -20,7 +20,7 @@
 
 ### 5.3: Create PHP Test Script:
 
-`sudo vim /var/www/projectlamp/index.php`
+`vim /var/www/projectlamp/index.php`
 
 #### Inside the file, add the following PHP code: 
 

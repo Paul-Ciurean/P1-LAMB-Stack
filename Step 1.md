@@ -34,6 +34,10 @@
 
 `http://<Public-IP-Address>:80`   replace the <Public-IP-Address> with the public IPv4 from the ubuntu server
 
+### Another way to retrieve your Public IP address, other than to check it in AWS Web console, is to use following command:
+
+`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+
 ### If you see following page, then your web server is now correctly installed and accessible through your firewall.
 
 ![apache website](./images/apache-website.png)
